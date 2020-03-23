@@ -16,6 +16,16 @@ class Time
 public:
 	Time();
 
+    Time operator+  (const Time timer);
+    Time operator+= (const Time timer);
+    Time operator+  (const int seconds_to_add);
+    Time operator+= (const int seconds_to_add);
+    bool operator>  (const Time timer);
+    bool operator<  (const Time timer);
+    bool operator== (const Time timer);
+    bool operator<= (const Time timer);
+    bool operator>= (const Time timer);
+
 	void print_state();
 
 };

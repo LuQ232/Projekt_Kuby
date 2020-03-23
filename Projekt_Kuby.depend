@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1584967997 source:c:\users\48503\desktop\cpp\projekt_kuby\main.cpp
+1584985032 source:c:\users\48503\desktop\cpp\projekt_kuby\main.cpp
 	<iostream>
 	"time.h"
 
-1584967661 c:\users\48503\desktop\cpp\projekt_kuby\time.h
+1584985228 c:\users\48503\desktop\cpp\projekt_kuby\time.h
 	<iostream>
 
-1584967642 source:c:\users\48503\desktop\cpp\projekt_kuby\time.cpp
+1584985178 source:c:\users\48503\desktop\cpp\projekt_kuby\time.cpp
 	"time.h"
 
