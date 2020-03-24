@@ -1,11 +1,21 @@
 # depslib dependency file v1.0
-1584985032 source:c:\users\48503\desktop\cpp\projekt_kuby\main.cpp
+1585062184 source:c:\users\48503\desktop\cpp\projekt_kuby\main.cpp
 	<iostream>
 	"time.h"
+	"lathe.h"
 
-1584985228 c:\users\48503\desktop\cpp\projekt_kuby\time.h
+1585062264 c:\users\48503\desktop\cpp\projekt_kuby\time.h
 	<iostream>
 
-1584985178 source:c:\users\48503\desktop\cpp\projekt_kuby\time.cpp
+1585049934 source:c:\users\48503\desktop\cpp\projekt_kuby\time.cpp
+	"time.h"
+
+1585057903 source:c:\users\48503\desktop\cpp\projekt_kuby\lathe.cpp
+	"lathe.h"
+
+1585057058 c:\users\48503\desktop\cpp\projekt_kuby\lathe.h
+	<iostream>
+	<vector>
+	<memory>
 	"time.h"
 

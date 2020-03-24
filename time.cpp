@@ -51,7 +51,37 @@ std::cout<<"Hours: ";
 	std::cout<<std::endl;
 }
 
+Time::Time(std::string process_name, int h, int m, int s)
+{
+process = process_name;
+hours=h;
+minutes=m;
+seconds = s;
 
+
+	if(seconds>=60)
+    {
+        int add_to_minutes = seconds /60;
+        int rest_seconds = seconds % 60;
+        minutes+=add_to_minutes;
+        seconds = rest_seconds;
+    }
+    if(minutes>=60)
+    {
+        int add_to_hours = minutes /60;
+        int rest_minutes = minutes % 60;
+        hours+=add_to_hours;
+        minutes = rest_minutes;
+    }
+
+
+	std::cout<<std::endl;
+}
+
+Time::~Time()
+{
+    //std::cout<<"Time destructor!"<<std::endl;
+}
 void Time::print_state()
 {
     std::cout<<"Process: "<<process<<"    Hours: "<<hours<<" Minutes: "<<minutes<<" Seconds: "<<seconds<<std::endl;
