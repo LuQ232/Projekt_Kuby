@@ -19,10 +19,19 @@ void Lathe::return_copy_of_lathe_in_time(const Lathe lathe,  Time time)
 
 Lathe::Lathe (const Lathe lathe, unsigned int quantity) // etap 4 point 2
 {
-    for(unsigned int i=0; i<quantity;i++)
+    if(quantity >lathe.lathe_processes.size())
     {
-       lathe_processes.push_back(lathe.lathe_processes[i]);
+        std::cout<<"In lathe is not that many processes!!!"<<std::endl;
+        return;
     }
+    else
+    {
+        for(unsigned int i=0; i<quantity;i++)
+        {
+           lathe_processes.push_back(lathe.lathe_processes[i]);
+        }
+    }
+
 }
 
 Lathe & Lathe::operator = (const Lathe& assigment)// ASSIGNMENT OPERATOR!!
@@ -93,5 +102,14 @@ void Lathe::print_process_data(unsigned int index)
         if(i==index)
             lathe_processes[i]->print_state();
     }
+}
+
+void Lathe::pop_all_processes()
+{
+    while(!lathe_processes.empty())
+    {
+        lathe_processes.pop_back();
+    }
+
 }
 

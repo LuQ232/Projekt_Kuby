@@ -20,7 +20,7 @@ public:
     Lathe (const Lathe lathe, unsigned int quantity); // etap 4 point 2
 
     void return_copy_of_lathe_in_time(const Lathe lathe,const Time time);
-
+    void pop_all_processes();
     void add_new_process();
     void print_all_processes_name();
     void print_all_processes_data();

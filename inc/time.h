@@ -15,6 +15,7 @@ class Time
 
 public:
 	Time();
+	Time(std::string process_name);
     Time(std::string process_name,int h, int m,int s);
     ~Time();
 

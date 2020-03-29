@@ -19,3 +19,23 @@
 	<memory>
 	"time.h"
 
+1585510693 source:c:\users\48503\desktop\cpp\projekt_kuby\src\lathe.cpp
+	"../inc/lathe.h"
+
+1585510037 c:\users\48503\desktop\cpp\projekt_kuby\inc\lathe.h
+	<iostream>
+	<vector>
+	<memory>
+	"time.h"
+
+1585509568 c:\users\48503\desktop\cpp\projekt_kuby\inc\time.h
+	<iostream>
+
+1585511399 source:c:\users\48503\desktop\cpp\projekt_kuby\src\main.cpp
+	<iostream>
+	"../inc/time.h"
+	"../inc/lathe.h"
+
+1585509569 source:c:\users\48503\desktop\cpp\projekt_kuby\src\time.cpp
+	"../inc/time.h"
+
