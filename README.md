@@ -1,6 +1,6 @@
 # Project for studies
-## Lathe
-Project tests and demonstrates different sorting algorithms.
+## Lathe Project
+It is a system analyzing lathe work statistics
 
 ## Compiling
 To build project:
