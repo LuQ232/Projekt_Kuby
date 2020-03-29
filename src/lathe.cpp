@@ -1,4 +1,46 @@
-#include "lathe.h"
+#include "../inc/lathe.h"
+
+Lathe::Lathe ()
+{
+
+}
+
+void Lathe::return_copy_of_lathe_in_time(const Lathe lathe,  Time time)
+{
+    for(unsigned int i=0; i<lathe.lathe_processes.size();i++)
+    {
+        if(*(lathe.lathe_processes[i]) <= time)
+        {
+            lathe_processes.push_back(lathe.lathe_processes[i]);
+            time-= *(lathe.lathe_processes[i]);
+        }
+    }
+}
+
+Lathe::Lathe (const Lathe lathe, unsigned int quantity) // etap 4 point 2
+{
+    for(unsigned int i=0; i<quantity;i++)
+    {
+       lathe_processes.push_back(lathe.lathe_processes[i]);
+    }
+}
+
+Lathe & Lathe::operator = (const Lathe& assigment)// ASSIGNMENT OPERATOR!!
+{
+    for(unsigned int i=0; i<assigment.lathe_processes.size();i++)
+    {
+       lathe_processes.push_back(assigment.lathe_processes[i]);
+    }
+    return *this;
+}
+
+Lathe::Lathe (const Lathe &lathe) // COPY CONSTRUCTOR!!
+{
+    for(unsigned int i=0; i<lathe.lathe_processes.size();i++)
+    {
+       lathe_processes.push_back(lathe.lathe_processes[i]);
+    }
+}
 
 void Lathe:: add_new_process()
 {

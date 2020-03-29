@@ -1,12 +1,21 @@
 #include <iostream>
 
-#include "time.h"
-#include "lathe.h"
+#include "../inc/time.h"
+#include "../inc/lathe.h"
 
 
 int main()
 {
     Lathe cnc;
+    cnc.add_new_process();
+    cnc.add_new_process();
+    cnc.add_new_process();
+    Lathe copy_of_cnc;
+
+    //Lathe copy_of_cnc(cnc,1);
+
+    Time timer("eee",10,10,10);
+    copy_of_cnc.return_copy_of_lathe_in_time(cnc,timer);
     std::string menu = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n1.Menu\n2.Add Process\n3.Show all processes names \n4.Show data about chosen process \n5.Show all processes data\n6.Show sum of all processes\n7.Exit\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
     std::cout<<menu;
     int choice;

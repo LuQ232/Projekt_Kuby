@@ -1,4 +1,4 @@
-#include "time.h"
+#include "../inc/time.h"
 
 Time::Time()
 {
@@ -134,6 +134,32 @@ if(this->seconds>=60)
 
 return *this;
 }
+
+Time Time::operator-= (const Time timer)
+    {
+    this->hours -=timer.hours;
+    this->minutes -= timer.minutes;
+    this->seconds -= timer.seconds;
+
+    if(this->seconds>=60)
+        {
+            int add_to_minutes = this->seconds /60;
+            int rest_seconds = this->seconds % 60;
+            this->minutes-=add_to_minutes;
+            this->seconds = rest_seconds;
+        }
+        if(this->minutes>=60)
+        {
+            int add_to_hours = this->minutes /60;
+            int rest_minutes = this->minutes % 60;
+            this->hours-=add_to_hours;
+            this->minutes = rest_minutes;
+        }
+
+    return *this;
+}
+
+
 Time Time::operator+  (const int seconds_to_add)
 {
     this->seconds += seconds_to_add;
@@ -176,6 +202,8 @@ Time Time::operator+=  (const int seconds_to_add)
 
     return *this;
 }
+
+
 
 bool Time::operator> (const Time timer)
 {
